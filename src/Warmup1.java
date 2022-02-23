@@ -1,5 +1,4 @@
-public class Warmup_1 {
-    public class sleepIn {
+public class Warmup1 {
 
         public boolean sleepIn(boolean weekday, boolean vacation) {
             if (!weekday || vacation) {
@@ -205,13 +204,12 @@ public class Warmup_1 {
 
 
         public String delDel(String str) {
-            public String delDel(String str) {
                 if(str.length() >= 4 && str.substring(1,4).equals("del")) {
                     return str.substring(0, 1) + str.substring(4);
                 }else{
                     return str;}
             }
-        }
+
 
 
         public boolean mixStart(String str) {
@@ -327,5 +325,4 @@ public class Warmup_1 {
             return everyNthStr;
         }
 
-    }
     }

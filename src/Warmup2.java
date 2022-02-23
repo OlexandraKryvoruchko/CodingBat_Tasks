@@ -1,4 +1,4 @@
-public class Warmup_2 {
+public class Warmup2 {
 
     public String stringTimes(String str, int n) {
         String newStr = "";

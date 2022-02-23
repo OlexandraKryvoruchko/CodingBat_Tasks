@@ -1,4 +1,4 @@
-public class Array_1 {
+public class Array1 {
 
     public boolean firstLast6(int[] nums) {
 
@@ -221,6 +221,189 @@ public class Array_1 {
         }else{
             return b;
         }
+    }
+
+
+
+
+
+    public int[] makeMiddle(int[] nums) {
+
+        int midL = nums.length / 2;
+        int [] midCh = new int [2];
+
+        if(nums.length >= 3){
+
+            midCh[0] = nums[midL - 1];
+            midCh[1] = nums[midL];
+            return midCh;
+        }
+        return nums;
+    }
+
+
+
+
+
+    public int[] plusTwo(int[] a, int[] b) {
+
+        int [] allElm = new int[4];
+
+        allElm[0] = a[0];
+        allElm[1] = a[1];
+        allElm[2] = b[0];
+        allElm[3] = b[1];
+
+        return allElm;
+
+    }
+
+
+
+
+
+    public int[] swapEnds(int[] nums) {
+
+        int length = nums.length;
+        int firstCh = nums[0];
+
+        nums[0] = nums[length - 1];
+        nums[length - 1] = firstCh;
+
+        return nums;
+
+    }
+
+
+
+
+    public int[] midThree(int[] nums) {
+
+        int midCh = nums.length / 2;
+        int [] mid = new int [3];
+
+        mid[0] = nums[midCh - 1];
+        mid[1] = nums[midCh];
+        mid[2] = nums[midCh + 1];
+
+        return mid;
+    }
+
+
+
+
+
+
+
+        public int maxTriple(int[] nums) {
+
+            int midCh = nums.length / 2;
+            int first = nums[0];
+            int mid = nums[midCh];
+            int last = nums[nums.length - 1];
+
+            if( nums.length > 1)
+
+                if(first > mid && first > last)
+                    return first;
+            if( mid > first && mid > last)
+                return mid;
+
+
+            return last;
+
+    }
+
+
+
+
+
+    public int[] frontPiece(int[] nums) {
+
+        int [] newNums = new int [2];
+
+        if(nums.length <= 1 || nums.length == 2)
+            return nums;
+
+        if(nums.length > 2)
+
+            newNums[0] = nums[0];
+        newNums[1] = nums[1];
+
+        return newNums;
+
+    }
+
+
+
+    public boolean unlucky1(int[] nums) {
+
+        if( nums.length >= 2 && nums[0] == 1 && nums[1] == 3 ){
+            return true;
+
+        }
+        else if(nums.length > 2 && nums[1] == 1 && nums[2] == 3 ){
+            return true;
+        }
+        else if( nums.length > 2 && nums[nums.length - 2] == 1 && nums[nums.length - 1] == 3 ){
+            return true;
+        }
+        return false;
+    }
+
+
+
+    public int[] make2(int[] a, int[] b) {
+
+        int [] two = new int [2];
+
+        if( a.length == 1){
+            two[0] = a[0];
+            two[1] = b[0];
+        }
+        else if( a.length == 0){
+            two[0] = b[0];
+            two[1] = b[1];
+        }
+        else if( a.length > 1){
+            two[0] = a[0];
+            two[1] = a[1];
+        }
+        return two;
+    }
+
+
+
+    public int[] front11(int[] a, int[] b) {
+
+        if( a.length > 0 && b.length > 0 ){
+            int[] newM = new int[2];
+
+            newM[0] = a[0];
+            newM[1] = b[0];
+
+            return newM;
+        }
+
+        if( a.length > 0 && b.length == 0 ){
+            int[] newM = new int[2];
+
+            newM[0] = a[0];
+
+            return newM;
+        }
+
+        if( a.length == 0 && b.length > 0 ){
+            int[] newM = new int[1];
+
+            newM[0] = b[0];
+
+            return newM;
+        }
+
+        int[] newM = new int[0];
+
+        return newM;
     }
 
 

@@ -1,4 +1,4 @@
-public class String_1 {
+public class String1 {
 
     public String helloName(String name) {
 
